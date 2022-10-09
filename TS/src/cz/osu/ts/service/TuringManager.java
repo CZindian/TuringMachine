@@ -6,7 +6,7 @@ import cz.osu.ts.model.Tape;
 import java.util.ArrayList;
 import java.util.List;
 
-import static cz.osu.ts.service.RuleManager.*;
+import static cz.osu.ts.Config.*;
 
 public class TuringManager {
 
@@ -21,22 +21,15 @@ public class TuringManager {
     }
 
     private static void readTapeOfChars(int headIndex, List<String> tapeOfChars, String binaryDigit1) {
-        rules = getRules();
-        int beginingIndex = headIndex;
-        int endIndex = beginingIndex + binaryDigit1.length();
-
-        while(!containsOnlyDigitBetween(tapeOfChars, beginingIndex, endIndex)){
-            for (Rule rule : rules){
-                RuleManager.checkByRule(headIndex, tapeOfChars, rule);
-            }
-        }
+        throw new UnsupportedOperationException("readTapeOfChars() is not implemented!");
     }
 
-    private static List<Rule> getRules(){
-        if (rules == null || rules.isEmpty()){
+    //region Util methods
+    private static List<Rule> getRules() {
+        if (rules == null || rules.isEmpty()) {
             fillRules();
             return rules;
-        }else {
+        } else {
             return rules;
         }
     }
@@ -64,7 +57,7 @@ public class TuringManager {
 
     private static boolean containsOnlyDigitBetween(List<String> tapeOfChars, int beginingIndex, int endIndex) {
         boolean ret = false;
-        if (tapeOfChars.get(endIndex+2).equals("#")){
+        if (tapeOfChars.get(endIndex + 2).equals("#")) {
             for (int i = beginingIndex; i <= endIndex; i++) {
                 ret = tapeOfChars.get(i).equals("0") || tapeOfChars.get(i).equals("1");
             }
@@ -81,5 +74,6 @@ public class TuringManager {
         }
         throw new IllegalArgumentException("Tape is empty!");
     }
+    //endregion
 
 }
