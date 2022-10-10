@@ -1,6 +1,16 @@
 package com.company;
 
+import static com.company.Operation.*;
+
 public class Config {
+
+    //region Config constants
+    private static final String a = "A";
+    public static final String b = "B";
+    public static final String c = "C";
+    public static final String d = "D";
+    public static final String hash = "#";
+    //endregion
 
     //region One tape machine rules
     public static final Rule[] rules = new Rule[]{
@@ -59,19 +69,53 @@ public class Config {
     //endregion
     //region Dual tape machine rules
     public static final RuleDualTape[] rulesDualTape = new RuleDualTape[]{
-            new RuleDualTape(0, 1, "A", "#", "#", "A", Operation.RIGHT, Operation.RIGHT),
-            new RuleDualTape(0, 1, "B", "#", "#", "C", Operation.RIGHT, Operation.RIGHT),
-            new RuleDualTape(0, 1, "C", "#", "#", "C", Operation.RIGHT, Operation.RIGHT),
-            new RuleDualTape(0, 1, "D", "#", "#", "D", Operation.RIGHT, Operation.RIGHT),
+            new RuleDualTape(0, 1, a, hash, hash, a, RIGHT, RIGHT),
+            new RuleDualTape(0, 1, b, hash, hash, b, RIGHT, RIGHT),
+            new RuleDualTape(0, 1, c, hash, hash, c, RIGHT, RIGHT),
+            new RuleDualTape(0, 1, d, hash, hash, d, RIGHT, RIGHT),
 
-            new RuleDualTape(1, 0, "B", "#", "#", "B", Operation.RIGHT, Operation.RIGHT),
-            new RuleDualTape(1, 0, "A", "#", "#", "A", Operation.RIGHT, Operation.RIGHT),
+            new RuleDualTape(1, 0, a, hash, hash, hash, RIGHT, STAY),
+            new RuleDualTape(1, 0, b, hash, hash, b, RIGHT, RIGHT),
+            new RuleDualTape(1, 0, c, hash, hash, hash, RIGHT, STAY),
+            new RuleDualTape(1, 0, d, hash, hash, d, RIGHT, RIGHT),
 
-            new RuleDualTape(0, 2, "#", "#", "#", "#", Operation.LEFT, Operation.LEFT),
+            new RuleDualTape(0, 2, hash, hash, hash, hash, STAY, LEFT),
+            new RuleDualTape(1, 2, hash, hash, hash, hash, LEFT, LEFT),
 
-            new RuleDualTape(1, 2, "#", "#", "#", "#", Operation.LEFT, Operation.LEFT),
+            new RuleDualTape(2, 2, hash, a, a, hash, LEFT, LEFT),
+            new RuleDualTape(2, 2, hash, b, b, hash, LEFT, LEFT),
+            new RuleDualTape(2, 2, hash, c, c, hash, LEFT, LEFT),
+            new RuleDualTape(2, 2, hash, d, d, hash, LEFT, LEFT),
 
+            new RuleDualTape(2, 3, hash, hash, hash, hash, RIGHT, RIGHT),
 
+            new RuleDualTape(3, 3, a, a, hash, hash, RIGHT, STAY),
+            new RuleDualTape(3, 3, b, b, hash, hash, RIGHT, STAY),
+            new RuleDualTape(3, 3, c, c, hash, hash, RIGHT, STAY),
+            new RuleDualTape(3, 3, d, d, hash, d, RIGHT, RIGHT),
+
+            new RuleDualTape(3, 4, hash, hash, hash, hash, LEFT, STAY),
+
+            new RuleDualTape(4, 4, a, a, hash, hash, LEFT, STAY),
+            new RuleDualTape(4, 4, b, b, hash, hash, LEFT, STAY),
+            new RuleDualTape(4, 4, c, c, hash, c, LEFT, RIGHT),
+            new RuleDualTape(4, 4, d, d, hash, hash, LEFT, STAY),
+
+            new RuleDualTape(4, 5, hash, hash, hash, hash, RIGHT, STAY),
+
+            new RuleDualTape(5, 5, a, a, hash, hash, RIGHT, STAY),
+            new RuleDualTape(5, 5, b, b, hash, b, RIGHT, RIGHT),
+            new RuleDualTape(5, 5, c, c, hash, hash, RIGHT, STAY),
+            new RuleDualTape(5, 5, d, d, hash, hash, RIGHT, STAY),
+
+            new RuleDualTape(5, 6, hash, hash, hash, hash, LEFT, STAY),
+
+            new RuleDualTape(6, 6, a, a, hash, a, LEFT, RIGHT),
+            new RuleDualTape(6, 6, b, b, hash, hash, LEFT, STAY),
+            new RuleDualTape(6, 6, c, c, hash, hash, LEFT, STAY),
+            new RuleDualTape(6, 6, d, d, hash, hash, LEFT, STAY),
+
+            new RuleDualTape(6, 7, hash, hash, hash, hash, STAY, STAY),
     };
     //endregion
 }
