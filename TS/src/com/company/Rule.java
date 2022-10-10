@@ -1,11 +1,11 @@
 package com.company;
 
 public class Rule {
-    private final int currentState;
-    private final String readSymbol;
-    private final int nextState;
-    private final String writeSymbol;
-    private final Operation operation;
+    protected final int currentState;
+    protected final String readSymbol;
+    protected final int nextState;
+    protected final String writeSymbol;
+    protected final Operation operation;
 
     public Rule(int currentState, int nextState, String readSymbol, String writeSymbol, Operation operation) {
         this.currentState = currentState;

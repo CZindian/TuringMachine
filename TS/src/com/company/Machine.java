@@ -5,10 +5,10 @@ import java.util.Optional;
 
 class Machine {
 
-    private final Rule[] rules;
-    private final Tape tape;
-    private int head;
-    private final int finalState;// pozice čtecí/zapisovací hlavy na pásce
+    protected final Rule[] rules;
+    protected final Tape tape;
+    protected int head;
+    protected final int finalState;// pozice čtecí/zapisovací hlavy na pásce
 
     public Machine(Rule[] rules, Tape tape, int head, int finalState) {
         this.rules = rules;
