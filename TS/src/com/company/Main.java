@@ -19,7 +19,7 @@ public class Main {
         MachineDualTape machineDualTape = new MachineDualTape(
                 Config.rulesDualTape,
                 tape, tapeTwo,
-                3, 6, 19
+                3, 3, 19
         ); //just guessed numbers. Check Before Run!!!!!
         machineDualTape.compute();
     }

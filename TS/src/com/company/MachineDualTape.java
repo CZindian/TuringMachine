@@ -27,14 +27,14 @@ public class MachineDualTape extends Machine {
                 Optional<RuleDualTape> hopefullyRightRule = Arrays.stream(ruleDualTapes).
                         filter(rule -> rule.getCurrentState() == finalCurrentState).
                         filter(rule -> rule.getReadSymbol().equals(tape.getSymbol(head))).
-                        filter(rule -> rule.getReadSymbolSecondTape().equals(tape.getSymbol(head))).
+                        filter(rule -> rule.getReadSymbolSecondTape().equals(secondTape.getSymbol(secondTapeHead))).
                         findFirst();
 
                 RuleDualTape rightRule = hopefullyRightRule.get();
                 tape.setSymbol(
                         rightRule.getWriteSymbol(), head
                 );
-                tape.setSymbol(
+                secondTape.setSymbol(
                         rightRule.getWriteSymbolSecondTape(), secondTapeHead
                 );
 
@@ -57,6 +57,8 @@ public class MachineDualTape extends Machine {
 
             } catch (Exception e) {
                 System.out.println("missing rule!");
+                e.printStackTrace();
+                break;
             }
         }
         System.out.println(
