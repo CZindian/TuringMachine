@@ -1,7 +1,6 @@
 package com.company;
 
 import static com.company.Constants.*;
-import static com.company.Constants.h;
 
 public class Main {
 
@@ -13,15 +12,14 @@ public class Main {
     );
 
     public static void main(String[] args) {
-//        Machine machine = new Machine(Config.rules, tape, 3, 10);
-//        machine.compute();
 
         MachineDualTape machineDualTape = new MachineDualTape(
                 Config.rulesDualTape,
                 tape, tapeTwo,
-                3, 3, 19
-        ); //just guessed numbers. Check Before Run!!!!!
+                3, 3, 7
+        );
         machineDualTape.compute();
+
     }
 
 }

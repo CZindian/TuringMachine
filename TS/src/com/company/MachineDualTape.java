@@ -4,9 +4,12 @@ import java.util.Arrays;
 import java.util.Optional;
 
 public class MachineDualTape extends Machine {
+
+    //region Attributes
     private final Tape secondTape;
     private int secondTapeHead;
-    private RuleDualTape[] ruleDualTapes;
+    private final RuleDualTape[] ruleDualTapes;
+    //endregion
 
     public MachineDualTape(
             RuleDualTape[] rulesDualTape, Tape tape, Tape secondTape,
@@ -31,27 +34,12 @@ public class MachineDualTape extends Machine {
                         findFirst();
 
                 RuleDualTape rightRule = hopefullyRightRule.get();
-                tape.setSymbol(
-                        rightRule.getWriteSymbol(), head
-                );
-                secondTape.setSymbol(
-                        rightRule.getWriteSymbolSecondTape(), secondTapeHead
-                );
 
-                switch (rightRule.getOperation()) {
-                    case RIGHT -> head++;
-                    case LEFT -> head--;
-                    case STAY -> {
-                    }
-                    default -> throw new IllegalArgumentException("Illegal Operation!");
-                }
-                switch (rightRule.getOperationSecondTape()) {
-                    case RIGHT -> secondTapeHead++;
-                    case LEFT -> secondTapeHead--;
-                    case STAY -> {
-                    }
-                    default -> throw new IllegalArgumentException("Illegal Operation!");
-                }
+                setTapeSymbol(rightRule);
+                setSecondTapeSymbol(rightRule);
+
+                updateTapeHead(rightRule);
+                updateSecondTapeHead(rightRule);
 
                 currentState = rightRule.getNextState();
 
@@ -61,6 +49,43 @@ public class MachineDualTape extends Machine {
                 break;
             }
         }
+        printResult();
+    }
+
+    //region Util methods
+    private void setTapeSymbol(RuleDualTape rightRule) {
+        tape.setSymbol(
+                rightRule.getWriteSymbol(), head
+        );
+    }
+
+    private void setSecondTapeSymbol(RuleDualTape rightRule) {
+        secondTape.setSymbol(
+                rightRule.getWriteSymbolSecondTape(), secondTapeHead
+        );
+    }
+
+    private void updateTapeHead(RuleDualTape rightRule) {
+        switch (rightRule.getOperation()) {
+            case RIGHT -> head++;
+            case LEFT -> head--;
+            case STAY -> {
+            }
+            default -> throw new IllegalArgumentException("Illegal Operation!");
+        }
+    }
+
+    private void updateSecondTapeHead(RuleDualTape rightRule) {
+        switch (rightRule.getOperationSecondTape()) {
+            case RIGHT -> secondTapeHead++;
+            case LEFT -> secondTapeHead--;
+            case STAY -> {
+            }
+            default -> throw new IllegalArgumentException("Illegal Operation!");
+        }
+    }
+
+    private void printResult() {
         System.out.println(
                 Arrays.toString(tape.getSymbols())
         );
@@ -76,5 +101,6 @@ public class MachineDualTape extends Machine {
     public int getSecondTapeHead() {
         return secondTapeHead;
     }
+    //endregion
 
 }
