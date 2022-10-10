@@ -2,6 +2,7 @@ package com.company;
 
 public class Config {
 
+    //region One tape machine rules
     public static final Rule[] rules = new Rule[]{
             new Rule(0, 0, "X", "X", Operation.RIGHT),
             new Rule(0, 0, "Y", "Y", Operation.RIGHT),
@@ -55,19 +56,22 @@ public class Config {
             new Rule(9, 9, "0", "0", Operation.LEFT),
             new Rule(9, 10, "#", "#", Operation.STAY)
     };
+    //endregion
+    //region Dual tape machine rules
     public static final RuleDualTape[] rulesDualTape = new RuleDualTape[]{
-            new RuleDualTape(0,1,"A","#","#","A",Operation.RIGHT,Operation.RIGHT),
-            new RuleDualTape(0,1,"B","#","#","C",Operation.RIGHT,Operation.RIGHT),
-            new RuleDualTape(0,1,"C","#","#","C",Operation.RIGHT,Operation.RIGHT),
-            new RuleDualTape(0,1,"D","#","#","D",Operation.RIGHT,Operation.RIGHT),
+            new RuleDualTape(0, 1, "A", "#", "#", "A", Operation.RIGHT, Operation.RIGHT),
+            new RuleDualTape(0, 1, "B", "#", "#", "C", Operation.RIGHT, Operation.RIGHT),
+            new RuleDualTape(0, 1, "C", "#", "#", "C", Operation.RIGHT, Operation.RIGHT),
+            new RuleDualTape(0, 1, "D", "#", "#", "D", Operation.RIGHT, Operation.RIGHT),
 
-            new RuleDualTape(1,0,"B","#","#","B",Operation.RIGHT,Operation.RIGHT),
-            new RuleDualTape(1,0,"A","#","#","A",Operation.RIGHT,Operation.RIGHT),
+            new RuleDualTape(1, 0, "B", "#", "#", "B", Operation.RIGHT, Operation.RIGHT),
+            new RuleDualTape(1, 0, "A", "#", "#", "A", Operation.RIGHT, Operation.RIGHT),
 
-            new RuleDualTape(0,2,"#","#","#","#",Operation.LEFT,Operation.LEFT),
+            new RuleDualTape(0, 2, "#", "#", "#", "#", Operation.LEFT, Operation.LEFT),
 
-            new RuleDualTape(1,2,"#","#","#","#",Operation.LEFT,Operation.LEFT),
+            new RuleDualTape(1, 2, "#", "#", "#", "#", Operation.LEFT, Operation.LEFT),
 
 
     };
+    //endregion
 }
