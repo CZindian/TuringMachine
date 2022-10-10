@@ -45,7 +45,7 @@ public class MachineDualTape extends Machine {
                     }
                     default -> throw new IllegalArgumentException("Illegal Operation!");
                 }
-                switch (rightRule.getOperation()) {
+                switch (rightRule.getOperationSecondTape()) {
                     case RIGHT -> secondTapeHead++;
                     case LEFT -> secondTapeHead--;
                     case STAY -> {
