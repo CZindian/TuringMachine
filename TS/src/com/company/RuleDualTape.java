@@ -6,11 +6,9 @@ public class RuleDualTape extends Rule {
     private String writeSymbolSecondTape;
     private Operation operationSecondTape;
 
-    public RuleDualTape(
-            int currentState, int nextState,
-            String readSymbol, String writeSymbol,
-            String readSymbolSecondTape, String writeSymbolSecondTape,
-            Operation operation, Operation operationSecondTape
+    public RuleDualTape(int currentState, int nextState,String readSymbol, String writeSymbol,
+                        String readSymbolSecondTape, String writeSymbolSecondTape,
+                        Operation operation, Operation operationSecondTape
     ) {
         super(currentState, nextState, readSymbol, writeSymbol, operation);
         this.operationSecondTape = operationSecondTape;
