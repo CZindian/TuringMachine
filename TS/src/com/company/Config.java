@@ -72,7 +72,7 @@ public class Config {
             new RuleDualTape(1, 1, i, i, o, o, LEFT, LEFT),
             new RuleDualTape(1, 1, i, o, i, o, LEFT, LEFT),
 
-            new RuleDualTape(1, 2, h, h, h, h, STAY, LEFT),
+            new RuleDualTape(1, 2, h, h, h, h, STAY, RIGHT),
 
             new RuleDualTape(2, 2, h, h, o, o, STAY, RIGHT),
 
@@ -89,7 +89,7 @@ public class Config {
 
             new RuleDualTape(5, 5, o, h, o, h, RIGHT, LEFT),
             new RuleDualTape(5, 5, i, h, i, h, RIGHT, LEFT),
-            new RuleDualTape(3, 6, h, h, h, i, STAY, STAY)
+            new RuleDualTape(5, 6, h, h, h, i, STAY, STAY)
     };
     //endregion
     //region Dual tape machine rules

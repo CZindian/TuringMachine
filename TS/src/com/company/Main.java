@@ -11,10 +11,10 @@ public class Main {
             new String[]{h, h, h, h, h, h, h, h, h, h, h, h, h, h, h, h, h, h, h, h, h, h, h}
     );
     private static final Tape tapeBE = new Tape(
-            new String[]{h, h, i,o, h}
+            new String[]{h, h, i, o, h, h, h}
     );
     private static final Tape tapeTwoBE = new Tape(
-            new String[]{h,i,o,o, h}
+            new String[]{h, i, o, o, h, h, h}
     );
 
     public static void main(String[] args) {
@@ -22,7 +22,9 @@ public class Main {
         //MachineDualTape machineDualTape = new MachineDualTape(Config.rulesDualTape,tape, tapeTwo,3, 3, 7);
         //machineDualTape.compute();
 
-        MachineDualTape machineDualTape = new MachineDualTape(Config.rulesForBinaryExport,tapeBE, tapeTwoBE,1, 2, 6);
+        MachineDualTape machineDualTape = new MachineDualTape(
+                Config.rulesForBinaryExport, tapeBE, tapeTwoBE, 2, 1, 6
+        );
         machineDualTape.compute();
 
         //System.out.println(BinaryMachine.encodeMachineToBinary(Config.rules,10));
