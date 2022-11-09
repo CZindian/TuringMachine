@@ -118,45 +118,35 @@ public class Config {
             new RuleDualTape(0, 0, i, i, i, i, RIGHT, RIGHT),
             new RuleDualTape(0, 0, o, o, o, o, RIGHT, RIGHT),
 
-            new RuleDualTape(0, 1, h,h,h,h, LEFT, LEFT),
+            new RuleDualTape(0, 1, h, h, h, h, LEFT, LEFT),
 
             new RuleDualTape(1, 1, o, o, i, i, LEFT, LEFT),
             new RuleDualTape(1, 1, i, o, i, o, LEFT, LEFT),
             new RuleDualTape(1, 1, i, i, o, o, LEFT, LEFT),
             new RuleDualTape(1, 1, o, o, o, o, LEFT, LEFT),
 
-            new RuleDualTape(1, 2, h,h,h,h, RIGHT, RIGHT),
+            new RuleDualTape(1, 2, h, h, h, h, RIGHT, RIGHT),
 
-            new RuleDualTape(2, 2, o,h,o,h, RIGHT, RIGHT),
+            new RuleDualTape(2, 2, o, h, o, h, RIGHT, RIGHT),
 
-            new RuleDualTape(2, 3, i,o,o,h, RIGHT, RIGHT),
-            new RuleDualTape(2, 4, o,i,i,h, RIGHT, RIGHT),
+            new RuleDualTape(2, 3, i, o, o, h, RIGHT, RIGHT),
+            new RuleDualTape(2, 4, o, i, i, h, RIGHT, RIGHT),
 
-            new RuleDualTape(3, 3, o,h,o,h, RIGHT, RIGHT),
-            new RuleDualTape(3, 3, i,h,i,h, RIGHT, RIGHT),
-            new RuleDualTape(3, 3, o,h,i,h, RIGHT, RIGHT),
-            new RuleDualTape(3, 3, i,h,o,h, RIGHT, RIGHT),
+            new RuleDualTape(3, 3, o, h, o, h, RIGHT, RIGHT),
+            new RuleDualTape(3, 3, i, h, i, h, RIGHT, RIGHT),
+            new RuleDualTape(3, 3, o, h, i, h, RIGHT, RIGHT),
+            new RuleDualTape(3, 3, i, h, o, h, RIGHT, RIGHT),
 
-            new RuleDualTape(4, 4, o,h,o,h, RIGHT, RIGHT),
-            new RuleDualTape(4, 4, i,h,i,h, RIGHT, RIGHT),
-            new RuleDualTape(4, 4, o,h,i,h, RIGHT, RIGHT),
-            new RuleDualTape(4, 4, i,h,o,h, RIGHT, RIGHT),
+            new RuleDualTape(4, 4, o, h, o, h, RIGHT, RIGHT),
+            new RuleDualTape(4, 4, i, h, i, h, RIGHT, RIGHT),
+            new RuleDualTape(4, 4, o, h, i, h, RIGHT, RIGHT),
+            new RuleDualTape(4, 4, i, h, o, h, RIGHT, RIGHT),
 
-            new RuleDualTape(3, 5, h,h,h,h, STAY, STAY),
-            new RuleDualTape(4, 5, h,h,h,h, STAY, STAY),
-
-
-
-
-
-
-
-
-
-
-
+            new RuleDualTape(3, 5, h, h, h, h, STAY, STAY),
+            new RuleDualTape(4, 5, h, h, h, h, STAY, STAY),
 
 
     };
     //endregion
+
 }
