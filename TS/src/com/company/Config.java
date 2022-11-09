@@ -121,7 +121,7 @@ public class Config {
             new RuleDualTape(0, 1, h,h,h,h, LEFT, LEFT),
 
             new RuleDualTape(1, 1, o, o, i, i, LEFT, LEFT),
-            new RuleDualTape(1, 1, i, o, i, i, LEFT, LEFT),
+            new RuleDualTape(1, 1, i, o, i, o, LEFT, LEFT),
             new RuleDualTape(1, 1, i, i, o, o, LEFT, LEFT),
             new RuleDualTape(1, 1, o, o, o, o, LEFT, LEFT),
 
