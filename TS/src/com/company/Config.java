@@ -129,8 +129,8 @@ public class Config {
 
             new RuleDualTape(2, 2, o,h,o,h, RIGHT, RIGHT),
 
-            new RuleDualTape(2, 3, i,h,o,i, RIGHT, RIGHT),
-            new RuleDualTape(2, 4, o,h,i,o, RIGHT, RIGHT),
+            new RuleDualTape(2, 3, i,o,o,h, RIGHT, RIGHT),
+            new RuleDualTape(2, 4, o,i,i,h, RIGHT, RIGHT),
 
             new RuleDualTape(3, 3, o,h,o,h, RIGHT, RIGHT),
             new RuleDualTape(3, 3, i,h,i,h, RIGHT, RIGHT),
