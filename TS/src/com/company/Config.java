@@ -59,38 +59,6 @@ public class Config {
             new Rule(9, 9, "0", "0", Operation.LEFT),
             new Rule(9, 10, "#", "#", Operation.STAY)
     };
-    public static final RuleDualTape[] rulesForBinaryExport = new RuleDualTape[]{
-            new RuleDualTape(0, 0, i, i, i, i, RIGHT, RIGHT),
-            new RuleDualTape(0, 0, o, o, o, o, RIGHT, RIGHT),
-
-            new RuleDualTape(0, 1, h, h, h, h, LEFT, LEFT),
-
-            new RuleDualTape(1, 1, h, h, i, i, STAY, LEFT),
-            new RuleDualTape(1, 1, i, i, h, h, LEFT, STAY),
-            new RuleDualTape(1, 1, o, o, i, i, LEFT, LEFT),
-            new RuleDualTape(1, 1, o, o, o, o, LEFT, LEFT),
-            new RuleDualTape(1, 1, i, i, o, o, LEFT, LEFT),
-            new RuleDualTape(1, 1, i, o, i, o, LEFT, LEFT),
-
-            new RuleDualTape(1, 2, h, h, h, h, STAY, RIGHT),
-
-            new RuleDualTape(2, 2, h, h, o, o, STAY, RIGHT),
-
-            new RuleDualTape(2, 3, h, h, h, h, RIGHT, LEFT),
-            new RuleDualTape(2, 4, h, h, i, i, STAY, RIGHT),
-
-            new RuleDualTape(3, 3, o, h, o, h, RIGHT, LEFT),
-            new RuleDualTape(3, 3, i, h, i, h, RIGHT, LEFT),
-
-            new RuleDualTape(3, 6, h, h, h, o, STAY, STAY),
-
-            new RuleDualTape(4, 4, h, h, o, o, STAY, RIGHT),
-            new RuleDualTape(4, 5, h, h, h, h, RIGHT, LEFT),
-
-            new RuleDualTape(5, 5, o, h, o, h, RIGHT, LEFT),
-            new RuleDualTape(5, 5, i, h, i, h, RIGHT, LEFT),
-            new RuleDualTape(5, 6, h, h, h, i, STAY, STAY)
-    };
     //endregion
     //region Dual tape machine rules
     public static final RuleDualTape[] rulesDualTape = new RuleDualTape[]{
@@ -141,6 +109,54 @@ public class Config {
             new RuleDualTape(6, 6, d, d, h, h, LEFT, STAY),
 
             new RuleDualTape(6, 7, h, h, h, h, STAY, STAY),
+    };
+    //endregion
+    //region Dual tape machine rules for binary export
+    public static final RuleDualTape[] rulesForBinaryExport = new RuleDualTape[]{
+            new RuleDualTape(0, 0, i, i, o, o, RIGHT, RIGHT),
+            new RuleDualTape(0, 0, o, o, i, i, RIGHT, RIGHT),
+            new RuleDualTape(0, 0, i, i, i, i, RIGHT, RIGHT),
+            new RuleDualTape(0, 0, o, o, o, o, RIGHT, RIGHT),
+
+            new RuleDualTape(0, 1, h,h,h,h, LEFT, LEFT),
+
+            new RuleDualTape(1, 1, o, o, i, i, LEFT, LEFT),
+            new RuleDualTape(1, 1, i, o, i, o, LEFT, LEFT),
+            new RuleDualTape(1, 1, i, i, o, o, LEFT, LEFT),
+            new RuleDualTape(1, 1, o, o, o, o, LEFT, LEFT),
+
+            new RuleDualTape(1, 2, h,h,h,h, RIGHT, RIGHT),
+
+            new RuleDualTape(2, 2, o,h,o,h, RIGHT, RIGHT),
+
+            new RuleDualTape(2, 3, i,o,o,h, RIGHT, RIGHT),
+            new RuleDualTape(2, 4, o,i,i,h, RIGHT, RIGHT),
+
+            new RuleDualTape(3, 3, o,h,o,h, RIGHT, RIGHT),
+            new RuleDualTape(3, 3, i,h,i,h, RIGHT, RIGHT),
+            new RuleDualTape(3, 3, o,h,i,h, RIGHT, RIGHT),
+            new RuleDualTape(3, 3, i,h,o,h, RIGHT, RIGHT),
+
+            new RuleDualTape(4, 4, o,h,o,h, RIGHT, RIGHT),
+            new RuleDualTape(4, 4, i,h,i,h, RIGHT, RIGHT),
+            new RuleDualTape(4, 4, o,h,i,h, RIGHT, RIGHT),
+            new RuleDualTape(4, 4, i,h,o,h, RIGHT, RIGHT),
+
+            new RuleDualTape(3, 5, h,h,h,h, STAY, STAY),
+            new RuleDualTape(4, 5, h,h,h,h, STAY, STAY),
+
+
+
+
+
+
+
+
+
+
+
+
+
     };
     //endregion
 }
