@@ -33,7 +33,7 @@ public class Main {
                 Config.rulesForBinaryExport, tapeBE, tapeTwoBE, 2, 1, 5
         );
         machineDualTape.compute();
-
+        System.out.println(BinaryMachine.encodeMachineToBinary(Config.rulesForBinaryExport,6));
         //System.out.println(BinaryMachine.encodeMachineToBinary(Config.rules,10));
 
     }
